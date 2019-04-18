@@ -1,0 +1,54 @@
+.skin-blue .sidebar-menu>li>a, .skin-blue .sidebar-menu>li>a, .skin-blue .sidebar-menu>li.menu-open>a {
+    color: #fff;
+    background: #222D32;
+}
+.sidebar-menu>li, .skin-blue .sidebar-menu>li>a, .skin-blue .sidebar-menu>li.menu-open>a {
+    color: #fff;
+    background: #222D32;
+}
+.skin-blue .sidebar-menu>li:hover>a, .skin-blue .sidebar-menu>li.active>a{
+    color: #fff;
+    background: #1e282c;
+}
+.widget-user .widget-user-header {
+    padding: 20px;
+    height: 140px;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+.widget-user .widget-user-image {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    margin-left: -45px;
+}
+.widget-user .widget-user-desc{
+    margin-top: 0;
+    font-weight: 300;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}
+h5.widget-user-join-date,h5.widget-user-phone {
+    margin-top: 0;
+    font-weight: 400;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}
+div.polaroid {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    margin: 15px;
+}
+
+div.text-house-box {
+    padding: 10px;
+}
+img.house_images {
+    width: 10%;
+    height: 140px;
+    padding: 10px;
+}
+td.admin_req_img_td {
+    width: 150px;
+}
+img.admin_req_img {
+    width: 100%;
+}
