@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 17, 2019 at 02:02 PM
+-- Generation Time: Apr 23, 2019 at 08:01 AM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.3
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `house-landing`
+-- Database: `50statehomes`
 --
 
 -- --------------------------------------------------------
@@ -141,7 +141,8 @@ CREATE TABLE `leads` (
 INSERT INTO `leads` (`id`, `house_id`, `user_id`, `appoint_date`, `appoint_time`, `offer_price`, `comment`, `buying_plan`, `toured`, `created_at`, `updated_at`) VALUES
 (1, 1, 1, '2019-04-17', '07:04:00', '$ 325', 'rt', 'cash', 'yes', '2019-04-17 03:19:08', '2019-04-17 03:19:08'),
 (2, 2, 1, '2019-04-25', '09:04:00', '$ 256', 'hhbfgf', 'cash', 'no', '2019-04-17 03:20:05', '2019-04-17 03:20:05'),
-(3, 2, 1, '2019-04-26', '09:04:00', '$ 325', 'hhm', 'cash', 'no', '2019-04-17 05:05:56', '2019-04-17 05:05:56');
+(3, 2, 1, '2019-04-26', '09:04:00', '$ 325', 'hhm', 'cash', 'no', '2019-04-17 05:05:56', '2019-04-17 05:05:56'),
+(4, 3, 1, '2019-04-26', '09:04:00', '$ 256', 't5est', 'cash', 'no', '2019-04-18 04:19:47', '2019-04-18 04:19:47');
 
 -- --------------------------------------------------------
 
@@ -292,7 +293,7 @@ ALTER TABLE `landing_houses`
 -- AUTO_INCREMENT for table `leads`
 --
 ALTER TABLE `leads`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `migrations`
