@@ -10,16 +10,6 @@ use Illuminate\Support\Facades\DB;
 class HomeController extends Controller
 {
     /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
-    /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
@@ -30,7 +20,6 @@ class HomeController extends Controller
             ->where('landing_houses.id','=',4)
             ->join('house_images','house_images.house_id','=','landing_houses.id')
             ->get();
-        //return $data;
         return view('index');
     }
 

@@ -17,6 +17,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@listAllHouses')->name('home');
 
+Route::get('/login', 'UserController@showLogin');
+Route::post('/login-verify', 'UserController@verifyLogin');
+Route::get('/register', 'UserController@showRegister');
+Route::post('/registration', 'UserController@registration');
+
 Route::group(['middleware' => 'adminVerify'], function (){
 
     Route::get('/admin','AdminController@index');
