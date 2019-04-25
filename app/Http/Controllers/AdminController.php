@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Admin;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
@@ -243,10 +244,47 @@ class AdminController extends Controller
         }
     }
     public function userListTable(){
-        return view('admin-panel.pages.user-list');
+        $users=User::all();
+        return view('admin-panel.pages.user-list',compact('users'));
     }
-    public function addUser(){
-        return view('admin-panel.pages.add-user');
+
+    public function editUser($id){
+        $userById=User::where('id',$id)->first();
+        return view('admin-panel.pages.edit-user',compact('userById'));
+    }
+    public function updateUser(Request $request){
+
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $filename =time().'.'.$extension;
+            $file->move('user/images/', $filename);
+            $file_path='user/images/'.$filename;
+            User::where('id',$request->id)
+                ->update(
+                    ['image' => $file_path]
+                );
+        }
+        if ($request->password == $request->c_password){
+            $status=User::where('id',$request->id)
+                ->update(
+                    [
+                        'name'=>$request->name,
+                        'phone'=>$request->phone,
+                        'password'=>Hash::make($request->password),
+                        'status'=>$request->status,
+                    ]
+                );
+        }
+        else{
+            return redirect('admin/users/profile/edit/'.$request->id)->with('error','confirm password is not matched.');
+        }
+        if (isset($status)){
+            return redirect('admin/user-list')->with('success','user info updated.');
+        }
+        else{
+            return redirect('admin/users/profile/edit/'.$request->id)->with('error','user info is not updated. try again.');
+        }
     }
 
 }

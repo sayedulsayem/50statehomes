@@ -36,7 +36,11 @@ Route::group(['middleware' => 'adminVerify'], function (){
     Route::post('/admin/profile/update','AdminController@updateProfile');
 
     Route::get('/admin/user-list','AdminController@userListTable');
-    Route::get('/admin/add-user','AdminController@addUser');
+    Route::post('/admin/user/profile/update','AdminController@updateUser');
+    Route::get('/admin/users/profile/edit/{id}','AdminController@editUser');
+    Route::get('/admin/users/change-status/{id}','AdminController@changeStatusUser');
+    Route::get('/admin/users/delete/{id}','AdminController@deleteUser');
+
 
     Route::get('/admin/house-landed-list','LandingHouseController@houseLandendList');
     Route::get('/admin/landing-house/edit/{id}','LandingHouseController@editHouseLanding');

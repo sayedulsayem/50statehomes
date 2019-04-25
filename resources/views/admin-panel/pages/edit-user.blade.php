@@ -1,18 +1,18 @@
 @extends('admin-panel.master')
 @section('title')
-    Add User
+    Edit User
 @endsection
 @section('body')
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Add New Admin
+                Edit User
                 <small>form</small>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="{{ url('/admin') }}"><i class="fa fa-dashboard"></i> Home</a></li>
-                <li class="active">Add admin</li>
+                <li class="active">Edit user</li>
             </ol>
         </section>
         <section class="content">
@@ -32,15 +32,23 @@
                         </div>
                     @endif
 
-                    <!-- form start -->
-                    <form class="form-horizontal" action="{{ url('/admin/add-new-admin') }}" method="post" enctype="multipart/form-data">
+                <!-- form start -->
+                    <form class="form-horizontal" action="{{ url('/admin/user/profile/update') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="box-body">
+                            <div class="form-group" hidden>
+                                <label for="id" class="col-sm-2 control-label">ID</label>
+
+                                <div class="col-sm-10">
+                                    <input name="id" value="{{ $userById->id }}" type="text" class="form-control" id="id" placeholder="id">
+                                </div>
+                            </div>
+
                             <div class="form-group">
                                 <label for="name" class="col-sm-2 control-label">Name</label>
 
                                 <div class="col-sm-10">
-                                    <input name="name" type="text" class="form-control" id="name" placeholder="Name">
+                                    <input name="name" value="{{ $userById->name }}" type="text" class="form-control" id="name" placeholder="Name">
                                 </div>
                             </div>
 
@@ -48,12 +56,12 @@
                                 <label for="email" class="col-sm-2 control-label">Email</label>
 
                                 <div class="col-sm-10">
-                                    <input name="email" type="email" class="form-control" id="email" placeholder="Email">
+                                    <input name="email" value="{{ $userById->email }}" type="email" class="form-control" id="email" placeholder="Email" readonly="readonly">
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label for="password" class="col-sm-2 control-label">Password</label>
+                                <label for="password" class="col-sm-2 control-label">New Password</label>
 
                                 <div class="col-sm-10">
                                     <input name="password" type="password" class="form-control" id="password" placeholder="Password">
@@ -61,10 +69,26 @@
                             </div>
 
                             <div class="form-group">
+                                <label for="c_password" class="col-sm-2 control-label">Confirm Password</label>
+
+                                <div class="col-sm-10">
+                                    <input name="c_password" type="password" class="form-control" id="c_password" placeholder="Confirm Password">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
                                 <label for="phone" class="col-sm-2 control-label">Phone</label>
 
                                 <div class="col-sm-10">
-                                    <input name="phone" type="text" class="form-control" id="phone" placeholder="Phone">
+                                    <input name="phone" value="{{ $userById->phone }}" type="text" class="form-control" id="phone" placeholder="Phone">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="stored-images" class="col-sm-2 control-label">Profile Picture</label>
+
+                                <div class="col-sm-10">
+                                    <img class="house_images" src="{{ asset($userById->image) }}" alt="House Images">
                                 </div>
                             </div>
 
@@ -77,11 +101,16 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="" class="col-sm-2 control-label">Status</label>
+                                <label for="status" class="col-sm-2 control-label">Status</label>
                                 <div class="col-sm-10">
                                     <select name="status" class="form-control" id="status">
-                                        <option value="active">Active</option>
-                                        <option value="inactive">Inactive</option>
+                                        @if($userById->status == 'active')
+                                            <option value="active">Active</option>
+                                            <option value="inactive">Inactive</option>
+                                        @elseif($userById->status == 'inactive')
+                                            <option value="inactive">Inactive</option>
+                                            <option value="active">Active</option>
+                                        @endif
                                     </select>
                                 </div>
                             </div>

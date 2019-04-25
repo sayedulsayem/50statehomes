@@ -1,4 +1,4 @@
-@extends('admin-panel.master')
+@extends('user.master')
 @section('title')
     Edit Admin
 @endsection
