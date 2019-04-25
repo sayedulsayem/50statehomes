@@ -47,18 +47,17 @@
                 </ul>
             </li>
 
-{{--            <li class="treeview {{ request()->is('admin/user-list') ? ' active menu-open' : '' }} {{ request()->is('admin/add-user') ? ' active menu-open' : '' }}">--}}
-{{--                <a href="#">--}}
-{{--                    <i class="fa fa-users"></i> <span>Users</span>--}}
-{{--                    <span class="pull-right-container">--}}
-{{--              <i class="fa fa-angle-left pull-right"></i>--}}
-{{--            </span>--}}
-{{--                </a>--}}
-{{--                <ul class="treeview-menu">--}}
-{{--                    <li class="{{ request()->is('admin/user-list') ? ' active' : '' }}"><a href="{{ url('/admin/user-list') }}"><i class="fa fa-circle-o"></i> User List </a></li>--}}
-{{--                    <li class="{{ request()->is('admin/add-user') ? ' active' : '' }}"><a href="{{ url('/admin/add-user') }}"><i class="fa fa-circle-o"></i> Add User </a></li>--}}
-{{--                </ul>--}}
-{{--            </li>--}}
+            <li class="treeview {{ request()->is('admin/user-list') ? ' active menu-open' : '' }} {{ request()->is('admin/add-user') ? ' active menu-open' : '' }}">
+                <a href="#">
+                    <i class="fa fa-users"></i> <span>Users</span>
+                    <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="{{ request()->is('admin/user-list') ? ' active' : '' }}"><a href="{{ url('/admin/user-list') }}"><i class="fa fa-circle-o"></i> User List </a></li>
+                </ul>
+            </li>
 
             <li class="treeview {{ request()->is('admin/house-landed-list') ? ' active menu-open' : '' }} {{ request()->is('admin/add-house-landing') ? ' active menu-open' : '' }}">
                 <a href="#">

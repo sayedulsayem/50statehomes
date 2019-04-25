@@ -637,3 +637,12 @@ div.text-house-box {
 #input_alert_msg{
     display: none;
 }
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0;
+    border: 1px solid transparent;
+}
+.container-login100 {
+    min-height: 95vh;
+}

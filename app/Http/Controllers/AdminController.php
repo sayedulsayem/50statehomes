@@ -30,7 +30,7 @@ class AdminController extends Controller
     }
     public function logOut(){
         Session::flush();
-        return redirect('/admin/login');
+        return redirect('/');
     }
     public function profile($id){
         $admin=Admin::where('id',$id)->first();
@@ -131,7 +131,7 @@ class AdminController extends Controller
                     Session::put('email',$getUserById->email);
                     Session::put('phone',$getUserById->phone);
                     Session::put('image',$getUserById->image);
-                    Session::put('type',$getUserById->status);
+                    Session::put('type',$getUserById->type);
                     Session::put('status',$getUserById->status);
                     Session::put('join_date',date_format($getUserById->created_at,'d-M-Y'));
 
@@ -241,6 +241,12 @@ class AdminController extends Controller
                 }
             }
         }
+    }
+    public function userListTable(){
+        return view('admin-panel.pages.user-list');
+    }
+    public function addUser(){
+        return view('admin-panel.pages.add-user');
     }
 
 }

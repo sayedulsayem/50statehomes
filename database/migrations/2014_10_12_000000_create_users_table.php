@@ -26,6 +26,7 @@ class CreateUsersTable extends Migration
             $table->string('otp')->nullable();
             $table->enum('phone_verify',['verified','unverified'])->default('unverified');
             $table->enum('type',['user','non-user'])->default('user');
+            $table->enum('status',['active','inactive'])->default('inactive');
             $table->rememberToken();
             $table->timestamps();
         });

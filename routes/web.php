@@ -20,6 +20,8 @@ Route::post('/login-verify', 'UserController@verifyLogin');
 Route::get('/register', 'UserController@showRegister');
 Route::post('/registration', 'UserController@registration');
 
+Route::get('/users', 'UserController@index');
+
 Route::group(['middleware' => 'adminVerify'], function (){
 
     Route::get('/admin','AdminController@index');
@@ -33,8 +35,8 @@ Route::group(['middleware' => 'adminVerify'], function (){
     Route::get('/admin/profile/edit/{id}','AdminController@profile');
     Route::post('/admin/profile/update','AdminController@updateProfile');
 
-    Route::get('/admin/user-list','UserController@userListTable');
-    Route::get('/admin/add-user','UserController@addUser');
+    Route::get('/admin/user-list','AdminController@userListTable');
+    Route::get('/admin/add-user','AdminController@addUser');
 
     Route::get('/admin/house-landed-list','LandingHouseController@houseLandendList');
     Route::get('/admin/landing-house/edit/{id}','LandingHouseController@editHouseLanding');
