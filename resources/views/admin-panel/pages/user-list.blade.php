@@ -59,7 +59,12 @@
                                         <!-- /.col -->
                                         <div class="col-sm-4 border-right">
                                             <div class="description-block">
-                                                <a class="btn btn-warning" href="{{ url('/admin/users/change-status/'.$user->id) }}">Disable</a>
+                                                @if($user->status == 'active')
+                                                    <a class="btn btn-warning" href="{{ url('/admin/users/change-status/'.$user->id) }}">Disable</a>
+                                                @else
+                                                    <a class="btn btn-warning" href="{{ url('/admin/users/change-status/'.$user->id) }}">Enable</a>
+                                                @endif
+
                                             </div>
                                             <!-- /.description-block -->
                                         </div>

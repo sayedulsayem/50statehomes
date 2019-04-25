@@ -286,5 +286,25 @@ class AdminController extends Controller
             return redirect('admin/users/profile/edit/'.$request->id)->with('error','user info is not updated. try again.');
         }
     }
+    public function changeStatusUser($id){
+        $info=User::where('id',$id)->first();
+        if ($info->status == 'active'){
+            $check=User::where('id',$id)
+                ->update(['status' => 'inactive']);
+            if ($check){
+                return redirect('admin/user-list')->with('success','user is disabled.');
+            }
+        }
+        elseif ($info->status == 'inactive'){
+            $check=User::where('id',$id)
+                ->update(['status' => 'active']);
+            if ($check){
+                return redirect('admin/user-list')->with('success','user is enabled.');
+            }
+        }
+        else{
+            return redirect('admin/user-list')->with('error','something went wrong. try again later.');
+        }
+    }
 
 }
