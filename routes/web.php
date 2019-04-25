@@ -13,8 +13,6 @@
 
 Route::get('/', 'HomeController@listAllHouses');
 
-Auth::routes();
-
 Route::get('/home', 'HomeController@listAllHouses')->name('home');
 
 Route::get('/login', 'UserController@showLogin');
