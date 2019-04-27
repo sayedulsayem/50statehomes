@@ -105,7 +105,10 @@ class LandingHouseController extends Controller
                 $i_status=$house_img->save();
             }
         }
-        if (isset($status) && isset($i_status)){
+        if (isset($status)){
+            return redirect('admin/house-landed-list')->with('success','House new info added successfully.');
+        }
+        elseif (isset($i_status)){
             return redirect('admin/house-landed-list')->with('success','House new info added successfully.');
         }
         else{
