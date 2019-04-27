@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 23, 2019 at 08:01 AM
+-- Generation Time: Apr 27, 2019 at 02:17 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.3
 
@@ -46,8 +46,7 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`id`, `name`, `email`, `password`, `phone`, `image`, `type`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Sayedul Sayem', 'sayedulsayemofficial@gmail.com', '$2y$10$zF8U5Hrr44YGch/ZtuzjouyYaHIXNeFnu9YB53iTrIgmeDGM9iE9S', '01515219181', 'panel/images/1555405186.jpg', 'superadmin', 'active', '2019-04-16 01:26:47', '2019-04-16 02:59:46'),
-(2, 'robi', 'ronydkbd8@gmail.com', '$2y$10$l9KVH8hy2/UWdVdSz3Fgo.sDphNFjKg1cizX71GuB1EvFvbqMOuki', '123456', 'panel/images/1555499222.jpg', 'admin', 'inactive', '2019-04-17 05:07:02', '2019-04-17 05:07:26');
+(1, 'Sayedul Sayem', 'sayedulsayemofficial@gmail.com', '$2y$10$vKM4APLivqYn9gBijSR2teI/PbePbMZRF8.YnsYra0rCMcXLNeHCu', '01515219181', 'panel/images/1556187041.jpg', 'superadmin', 'active', '2019-04-24 07:03:07', '2019-04-25 04:10:41');
 
 -- --------------------------------------------------------
 
@@ -68,20 +67,15 @@ CREATE TABLE `house_images` (
 --
 
 INSERT INTO `house_images` (`id`, `house_id`, `image`, `created_at`, `updated_at`) VALUES
-(5, 2, 'panel/images/house/download1555408939.jpg', '2019-04-16 04:02:19', '2019-04-16 04:02:19'),
-(6, 2, 'panel/images/house/GettyImages_823165612__1_.01555408939.jpg', '2019-04-16 04:02:19', '2019-04-16 04:02:19'),
-(7, 2, 'panel/images/house/istockphoto-856794670-612x6121555408939.jpg', '2019-04-16 04:02:19', '2019-04-16 04:02:19'),
-(8, 1, 'panel/images/house/450_93f2e39a-4cae-4b2b-b6fe-5daf04ab633f1555409964.jpg', '2019-04-16 04:19:24', '2019-04-16 04:19:24'),
-(9, 1, 'panel/images/house/4854_Alonzo_Ave__Encino_FInals_34.01555409964.jpg', '2019-04-16 04:19:24', '2019-04-16 04:19:24'),
-(10, 1, 'panel/images/house/download (1)1555409964.jpg', '2019-04-16 04:19:24', '2019-04-16 04:19:24'),
-(11, 1, 'panel/images/house/download (2)1555409964.jpg', '2019-04-16 04:19:24', '2019-04-16 04:19:24'),
-(12, 1, 'panel/images/house/download1555409964.jpg', '2019-04-16 04:19:24', '2019-04-16 04:19:24'),
-(13, 1, 'panel/images/house/GettyImages_823165612__1_.01555409964.jpg', '2019-04-16 04:19:24', '2019-04-16 04:19:24'),
-(14, 3, 'panel/images/house/maxresdefault1555499531.jpg', '2019-04-17 05:12:11', '2019-04-17 05:12:11'),
-(15, 3, 'panel/images/house/modern-house-design-muzaffarpur-architects-0zf1fjalfn1555499531.jpg', '2019-04-17 05:12:11', '2019-04-17 05:12:11'),
-(16, 3, 'panel/images/house/photo-1475855581690-80accde3ae2b1555499531.jpg', '2019-04-17 05:12:11', '2019-04-17 05:12:11'),
-(17, 3, 'panel/images/house/photo-1480074568708-e7b720bb3f091555499531.jpg', '2019-04-17 05:12:11', '2019-04-17 05:12:11'),
-(18, 3, 'panel/images/house/w10241555499531.jpg', '2019-04-17 05:12:11', '2019-04-17 05:12:11');
+(1, 1, 'panel/images/house/450_93f2e39a-4cae-4b2b-b6fe-5daf04ab633f1556112871.jpg', '2019-04-24 07:34:31', '2019-04-24 07:34:31'),
+(2, 1, 'panel/images/house/4854_Alonzo_Ave__Encino_FInals_34.01556112871.jpg', '2019-04-24 07:34:31', '2019-04-24 07:34:31'),
+(3, 1, 'panel/images/house/download (1)1556112871.jpg', '2019-04-24 07:34:31', '2019-04-24 07:34:31'),
+(4, 1, 'panel/images/house/download (2)1556112871.jpg', '2019-04-24 07:34:31', '2019-04-24 07:34:31'),
+(9, 3, 'user/images/house/download (1)1556345021.jpg', '2019-04-27 00:03:41', '2019-04-27 00:03:41'),
+(10, 3, 'user/images/house/download (2)1556345021.jpg', '2019-04-27 00:03:41', '2019-04-27 00:03:41'),
+(17, 5, 'panel/images/house/photo-1475855581690-80accde3ae2b1556364425.jpg', '2019-04-27 05:27:05', '2019-04-27 05:27:05'),
+(18, 5, 'panel/images/house/photo-1480074568708-e7b720bb3f091556364425.jpg', '2019-04-27 05:27:05', '2019-04-27 05:27:05'),
+(19, 5, 'panel/images/house/w10241556364425.jpg', '2019-04-27 05:27:05', '2019-04-27 05:27:05');
 
 -- --------------------------------------------------------
 
@@ -91,7 +85,8 @@ INSERT INTO `house_images` (`id`, `house_id`, `image`, `created_at`, `updated_at
 
 CREATE TABLE `landing_houses` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `admin_id` bigint(20) NOT NULL,
+  `admin_id` bigint(20) DEFAULT NULL,
+  `user_id` bigint(20) DEFAULT NULL,
   `street` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `city` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `state` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -109,10 +104,10 @@ CREATE TABLE `landing_houses` (
 -- Dumping data for table `landing_houses`
 --
 
-INSERT INTO `landing_houses` (`id`, `admin_id`, `street`, `city`, `state`, `zip`, `price`, `bed`, `bath`, `description`, `status`, `created_at`, `updated_at`) VALUES
-(1, 1, '558 Tiber River Way', 'oxnard', 'CA', '93036', '$ 450', '3', '2.5', 'kfdhasd sdfghsdfk sdfgh sdf gsdgh sdfgkjsd gskjg hs g', 'active', '2019-04-16 03:01:08', '2019-04-16 04:19:23'),
-(2, 1, '30 North Road', 'Dhanmondi', 'Dhaka', '1205', '$ 530', '5', '3', 'getgsr weryg ey erer ey ey e t ghgfhdfg erhfd h', 'active', '2019-04-16 04:02:18', '2019-04-16 04:02:18'),
-(3, 1, 'test', 'test', 'test', '14', '$ 45', '3', '2', 'test', 'active', '2019-04-17 05:12:11', '2019-04-17 05:12:11');
+INSERT INTO `landing_houses` (`id`, `admin_id`, `user_id`, `street`, `city`, `state`, `zip`, `price`, `bed`, `bath`, `description`, `status`, `created_at`, `updated_at`) VALUES
+(1, 1, NULL, '558 Tiber River Way', 'Ca', 'CA', '93036', '$ 450', '3', '2.5', 'dshgdfhdfhdgh', 'active', '2019-04-24 07:34:31', '2019-04-27 05:26:39'),
+(3, NULL, 2, '558 Tiber River Way', 'Dhanmondi', 'Dhaka', '1205', '45', '5', '6', '2222222222222222222222222', 'active', '2019-04-27 00:03:41', '2019-04-27 04:00:00'),
+(5, 1, 2, '30 North Road', 'oxnard', 'Dhaka', '14', '45', '3', '6', 'jhntngj', 'active', '2019-04-27 05:27:05', '2019-04-27 06:08:46');
 
 -- --------------------------------------------------------
 
@@ -123,7 +118,9 @@ INSERT INTO `landing_houses` (`id`, `admin_id`, `street`, `city`, `state`, `zip`
 CREATE TABLE `leads` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `house_id` bigint(20) NOT NULL,
-  `user_id` bigint(20) NOT NULL,
+  `lname` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `lemail` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `lphone` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `appoint_date` date NOT NULL,
   `appoint_time` time NOT NULL,
   `offer_price` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -138,11 +135,11 @@ CREATE TABLE `leads` (
 -- Dumping data for table `leads`
 --
 
-INSERT INTO `leads` (`id`, `house_id`, `user_id`, `appoint_date`, `appoint_time`, `offer_price`, `comment`, `buying_plan`, `toured`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, '2019-04-17', '07:04:00', '$ 325', 'rt', 'cash', 'yes', '2019-04-17 03:19:08', '2019-04-17 03:19:08'),
-(2, 2, 1, '2019-04-25', '09:04:00', '$ 256', 'hhbfgf', 'cash', 'no', '2019-04-17 03:20:05', '2019-04-17 03:20:05'),
-(3, 2, 1, '2019-04-26', '09:04:00', '$ 325', 'hhm', 'cash', 'no', '2019-04-17 05:05:56', '2019-04-17 05:05:56'),
-(4, 3, 1, '2019-04-26', '09:04:00', '$ 256', 't5est', 'cash', 'no', '2019-04-18 04:19:47', '2019-04-18 04:19:47');
+INSERT INTO `leads` (`id`, `house_id`, `lname`, `lemail`, `lphone`, `appoint_date`, `appoint_time`, `offer_price`, `comment`, `buying_plan`, `toured`, `created_at`, `updated_at`) VALUES
+(1, 1, 'sayem', 'sayem@gmail.com', '012457890', '2019-04-27', '08:04:00', '$ 325', 'gfjkggfg t gfsdfg sfg rsg sreg dsfg', 'cash', 'yes', '2019-04-27 03:09:20', '2019-04-27 03:24:02'),
+(8, 2, 'fddddddddddd', 'update@gmail.com', 'drgdrgrgdrgrfg', '2019-04-27', '07:04:00', '$ 3252222', 'drghbg', 'cash', 'yes', '2019-04-27 05:24:03', '2019-04-27 05:25:37'),
+(10, 3, 'test 22', 'test2@gmail.com', '02164622222', '2019-05-10', '08:04:00', '$ 325', 'fghnjhdfhj', 'cash', 'no', '2019-04-27 05:28:59', '2019-04-27 05:31:26'),
+(11, 5, 'babu vai', 'babuvai@gmail.com', '01245789624653233', '2019-05-16', '09:04:00', '$ 3258', 'ftghdjhgdg', 'cash', 'yes', '2019-04-27 06:09:57', '2019-04-27 06:09:57');
 
 -- --------------------------------------------------------
 
@@ -180,13 +177,6 @@ CREATE TABLE `password_resets` (
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `password_resets`
---
-
-INSERT INTO `password_resets` (`email`, `token`, `created_at`) VALUES
-('sayedul@gmail.com', '$2y$10$d/YsHbsM1mKyAxc6tg9px.M1IlavIVyClDlZX0uhBAPdN6otKGkZy', '2019-04-17 04:17:00');
-
 -- --------------------------------------------------------
 
 --
@@ -206,6 +196,7 @@ CREATE TABLE `users` (
   `otp` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `phone_verify` enum('verified','unverified') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'unverified',
   `type` enum('user','non-user') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'user',
+  `status` enum('active','inactive') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'inactive',
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -215,10 +206,8 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `image`, `provider`, `provider_id`, `password`, `phone`, `otp`, `phone_verify`, `type`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Sayedul', 'sayedul@gmail.com', NULL, NULL, NULL, NULL, '$2y$10$z.K/jgJSZZ4aX15waBpmbOM095LIt8CwAT0MsOS0nd393TMlpz/Re', '012458745', NULL, 'verified', 'user', NULL, '2019-04-16 02:10:11', '2019-04-16 02:10:11'),
-(3, 'user', 'user@gmail.com', NULL, NULL, NULL, NULL, '$2y$10$gZXVdJfzbY8WmH9uFkzO..T1EDTkheLJWQnLF6O4qMS33ALHKEvQO', '0151521918', NULL, 'unverified', 'user', NULL, '2019-04-16 02:40:04', '2019-04-16 02:40:04'),
-(6, 'admin', 'admin@gmail.com', NULL, NULL, NULL, NULL, '$2y$10$GOjp0mlpt0GpH6M9JDIGVusm8GTz5lQISh8NQn4J6aQtkcjNC4702', '123456', NULL, 'unverified', 'user', NULL, '2019-04-16 03:13:49', '2019-04-16 03:13:49');
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `image`, `provider`, `provider_id`, `password`, `phone`, `otp`, `phone_verify`, `type`, `status`, `remember_token`, `created_at`, `updated_at`) VALUES
+(2, 'Sayedul sa', 'sayedul@gmail.com', NULL, 'user/images/1556192919.jpg', NULL, NULL, '$2y$10$17l0.bqf46v.myrZUvb2dess3mMnFLRPC00a1foFtZDLcMFsxMk46', '01515219181', NULL, 'unverified', 'user', 'active', NULL, '2019-04-25 05:48:39', '2019-04-27 05:27:22');
 
 --
 -- Indexes for dumped tables
@@ -228,7 +217,8 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `image`, `provi
 -- Indexes for table `admins`
 --
 ALTER TABLE `admins`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `admins_email_unique` (`email`);
 
 --
 -- Indexes for table `house_images`
@@ -281,19 +271,19 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT for table `house_images`
 --
 ALTER TABLE `house_images`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `landing_houses`
 --
 ALTER TABLE `landing_houses`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `leads`
 --
 ALTER TABLE `leads`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -305,7 +295,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

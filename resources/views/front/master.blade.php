@@ -157,8 +157,6 @@
             </div>
             <ul class="nav navbar-nav">
                 <li class="active"><a href="{{ url('/home') }}">Home</a></li>
-                <li><a href="#">Page 1</a></li>
-                <li><a href="#">Page 2</a></li>
             </ul>
 
             @if(session()->has('id'))
