@@ -56,9 +56,9 @@
 
                                 @foreach($leads as $lead)
                                     <tr>
-                                        <td>{{ $lead->name }}</td>
-                                        <td>{{ $lead->email }}</td>
-                                        <td>{{ $lead->phone }}</td>
+                                        <td>{{ $lead->lname }}</td>
+                                        <td>{{ $lead->lemail }}</td>
+                                        <td>{{ $lead->lphone }}</td>
                                         <td>{{ date('m-d-Y', strtotime($lead->appoint_date)) }}</td>
                                         <td>{{ date('g:i a', strtotime($lead->appoint_time)) }}</td>
                                         <td>{{ date('m-d-Y', strtotime($lead->created_at)) }}</td>

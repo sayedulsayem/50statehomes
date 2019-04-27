@@ -240,6 +240,45 @@
             document.getElementById('input_msg').innerHTML = "Input all the field must required !";
         }
     }
+    function contactInfo() {
+        var date=document.getElementById("appoint_date").value;
+        var time=document.getElementById("appoint_time").value;
+        var offer_price=document.getElementById("offer_price").value;
+        var buying_plan=document.getElementById("buying_plan").value;
+        var toured=document.getElementById("toured").value;
+        if (date){
+            if (time){
+                if (offer_price){
+                    if (buying_plan){
+                        if (toured){
+                            document.getElementById("contact_info").style.display = "block";
+                            document.getElementById("popup_house_lead").style.display = "none";
+                        }
+                        else{
+                            document.getElementById("input_alert_msg_2").style.display = "block";
+                            document.getElementById('input_msg_2').innerHTML = "Input all the field must required !";
+                        }
+                    }
+                    else{
+                        document.getElementById("input_alert_msg_2").style.display = "block";
+                        document.getElementById('input_msg_2').innerHTML = "Input all the field must required !";
+                    }
+                }
+                else{
+                    document.getElementById("input_alert_msg_2").style.display = "block";
+                    document.getElementById('input_msg_2').innerHTML = "Input all the field must required !";
+                }
+            }
+            else{
+                document.getElementById("input_alert_msg_2").style.display = "block";
+                document.getElementById('input_msg_2').innerHTML = "Input all the field must required !";
+            }
+        }
+        else {
+            document.getElementById("input_alert_msg_2").style.display = "block";
+            document.getElementById('input_msg_2').innerHTML = "Input all the field must required !";
+        }
+    }
 </script>
 </body>
 </html>

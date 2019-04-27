@@ -646,3 +646,9 @@ div.text-house-box {
 .container-login100 {
     min-height: 95vh;
 }
+div#contact_info {
+    display: none;
+}
+div#input_alert_msg_2 {
+    display: none;
+}

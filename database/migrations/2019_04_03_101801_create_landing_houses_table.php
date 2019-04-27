@@ -16,7 +16,7 @@ class CreateLandingHousesTable extends Migration
         Schema::create('landing_houses', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('admin_id')->nullable()->default('NULL');
-            $table->bigInteger('admin_id')->nullable()->default('NULL');
+            $table->bigInteger('user_id')->nullable()->default('NULL');
             $table->string('street');
             $table->string('city');
             $table->string('state');

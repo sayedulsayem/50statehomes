@@ -12,14 +12,12 @@ use Illuminate\Support\Facades\DB;
 class LeadsController extends Controller
 {
     public function addLeadsHouse(Request $request){
-        if (Auth::check()){
-            $userId=Auth::user()->id;
-            $userEmail=Auth::user()->email;
-            $userName=Auth::user()->name;
-        }
         $lead=new Leads();
+
         $lead->house_id=$request->house_id;
-        $lead->user_id=$userId;
+        $lead->lname=$request->lname;
+        $lead->lemail=$request->lemail;
+        $lead->lphone=$request->lphone;
         $lead->appoint_date=date('Y:m:d', strtotime($request->appoint_date));
         $lead->appoint_time=date('h:m:s', strtotime($request->appoint_time));
         $lead->offer_price=$request->offer_price;
@@ -43,17 +41,14 @@ class LeadsController extends Controller
             $data[$i]['image']=$img->image;
             $i++;
         }
-        //return $data;
         return view('admin-panel.pages.leads',compact('data'));
     }
     public function singleLeadsHouse($street,$id){
         $leads=DB::table('landing_houses')
-            ->select('landing_houses.id as house_id','leads.id as lead_id','users.id as user_id','name','email','phone','street','city','state','zip','appoint_date','appoint_time','leads.created_at')
+            ->select('landing_houses.id as house_id','leads.id as lead_id','lname','lemail','lphone','street','city','state','zip','appoint_date','appoint_time','leads.created_at')
             ->where(['landing_houses.id' => $id, 'landing_houses.street' => $street])
             ->join('leads','landing_houses.id','=','leads.house_id')
-            ->join('users','leads.user_id','=','users.id')
             ->get();
-        //return $leads;
         return view('admin-panel.pages.leads-by-house',compact('leads'));
     }
     public function editLeadsHouse($id){

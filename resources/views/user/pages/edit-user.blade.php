@@ -11,7 +11,7 @@
                 <small>form</small>
             </h1>
             <ol class="breadcrumb">
-                <li><a href="{{ url('/admin') }}"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li><a href="{{ url('/users') }}"><i class="fa fa-dashboard"></i> Home</a></li>
                 <li class="active">Edit admin</li>
             </ol>
         </section>
@@ -33,7 +33,7 @@
                     @endif
 
                 <!-- form start -->
-                    <form class="form-horizontal" action="{{ url('/admin/profile/update') }}" method="post" enctype="multipart/form-data">
+                    <form class="form-horizontal" action="{{ url('/users/profile/update') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="box-body">
                             <div class="form-group" hidden>

@@ -158,18 +158,21 @@
                             </div>
 
                             <div class="popup_house_lead" id="popup_house_lead">
+                                <div id="input_alert_msg_2" class="alert alert-danger" role="alert">
+                                    <p id="input_msg_2"></p>
+                                </div>
                                 <div class="form-group">
                                     <label for="offer_price">How much would you like to offer?</label>
-                                    <input class="form-control" name="offer_price" type="text">
+                                    <input class="form-control" id="offer_price" name="offer_price" type="text">
                                 </div>
                                 <div class="form-group">
                                     <label for="offer_price">How do plan on buying?</label>
                                     <div>
                                         <label class="radio-inline">
-                                            <input type="radio" name="buying_plan" value="cash" checked>Cash
+                                            <input type="radio" id="buying_plan" name="buying_plan" value="cash" checked>Cash
                                         </label>
                                         <label class="radio-inline">
-                                            <input type="radio" name="buying_plan" value="cash">Loan
+                                            <input type="radio" id="buying_plan" name="buying_plan" value="cash">Loan
                                         </label>
                                     </div>
                                 </div>
@@ -177,10 +180,10 @@
                                     <label for="toured">Have you tored this home in person?</label>
                                     <div>
                                         <label class="radio-inline">
-                                            <input type="radio" name="toured" value="yes" checked>Yes
+                                            <input type="radio" id="toured" name="toured" value="yes" checked>Yes
                                         </label>
                                         <label class="radio-inline">
-                                            <input type="radio" name="toured" value="no">No
+                                            <input type="radio" id="toured" name="toured" value="no">No
                                         </label>
                                     </div>
                                 </div>
@@ -190,7 +193,24 @@
                                     </div>
                                     <textarea name="comment" id="comment" cols="45" rows="5"></textarea>
                                 </div>
-
+                                <input type="button" class="btn btn-primary" onclick="contactInfo()" value="Next">
+                            </div>
+                            <div class="contact_info" id="contact_info">
+                                <div id="input_alert_msg" class="alert alert-danger" role="alert">
+                                    <p id="input_msg"></p>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lname">Your Name</label>
+                                    <input class="form-control" id="lname" name="lname" type="text" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lemail">Your Email</label>
+                                    <input class="form-control" id="lemail" name="lemail" type="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lphone">Your Phone Number</label>
+                                    <input class="form-control" id="lphone" name="lphone" type="text" required>
+                                </div>
                                 <br>
                                 <button type="submit" class="btn btn-primary" >Submit</button>
                             </div>
