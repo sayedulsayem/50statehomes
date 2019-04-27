@@ -163,7 +163,11 @@
 
             @if(session()->has('id'))
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="{{ url('/users') }}"><span class="glyphicon glyphicon-user"></span> {{ Session::get('name') }} </a></li>
+                    @if(Session::get('type') == 'user')
+                        <li><a href="{{ url('/users') }}"><span class="glyphicon glyphicon-user"></span> {{ Session::get('name') }} </a></li>
+                        @elseif((Session::get('type') == 'superadmin') || Session::get('type') == 'admin')
+                        <li><a href="{{ url('/admin') }}"><span class="glyphicon glyphicon-user"></span> {{ Session::get('name') }} </a></li>
+                        @endif
                     <li><a href="{{ url('/log-out') }}"><span class="glyphicon glyphicon-log-in"></span> LogOut</a></li>
                 </ul>
                 @else

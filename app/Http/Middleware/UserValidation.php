@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Support\Facades\Session;
 
-class AdminValidation
+class UserValidation
 {
     /**
      * Handle an incoming request.
@@ -16,16 +16,11 @@ class AdminValidation
      */
     public function handle($request, Closure $next)
     {
-        if (Session::has('id')){
-            if ((Session::get('type') == 'admin') || (Session::get('type') == 'superadmin')){
-                return $next($request);
-                }
-            else{
-                return redirect('/admin/login');
-            }
+        if (Session::has('id') && (Session::get('type') == 'user')){
+            return $next($request);
         }
         else{
-            return redirect('/admin/login');
+            return redirect('/login');
         }
     }
 }

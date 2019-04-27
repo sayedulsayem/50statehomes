@@ -20,19 +20,21 @@ Route::post('/login-verify', 'UserController@verifyLogin');
 Route::get('/register', 'UserController@showRegister');
 Route::post('/registration', 'UserController@registration');
 
-Route::get('/users', 'UserController@index');
-Route::get('/users/add-house-landing', 'UserController@addHouseLanding');
-Route::post('/users/update-house-landing', 'UserController@updateHouseLanding');
-Route::post('/users/store-house-landing', 'UserController@storeHouseLanding');
-Route::get('/users/house-landed-list', 'UserController@houseLandendList');
-Route::get('/users/leads-house/{street}/{id}','UserController@singleLeadsHouse');
-Route::get('/users/leads','UserController@leadsHouses');
-Route::get('/users/leads/edit/{id}','UserController@editLeadsHouse');
-Route::post('/users/leads/update','UserController@updateLeadsHouse');
-Route::get('/users/leads/delete/{id}','UserController@leadDelete');
-Route::get('/users/leads-house/{street}/{id}','UserController@singleLeadsHouse');
-Route::get('/users/landing-house/edit/{id}','UserController@editHouseLanding');
-Route::get('/users/house/delete/{id}','UserController@destroy');
+Route::group(['middleware' => 'userVerify'], function (){
+    Route::get('/users', 'UserController@index');
+    Route::get('/users/add-house-landing', 'UserController@addHouseLanding');
+    Route::post('/users/update-house-landing', 'UserController@updateHouseLanding');
+    Route::post('/users/store-house-landing', 'UserController@storeHouseLanding');
+    Route::get('/users/house-landed-list', 'UserController@houseLandendList');
+    Route::get('/users/leads-house/{street}/{id}','UserController@singleLeadsHouse');
+    Route::get('/users/leads','UserController@leadsHouses');
+    Route::get('/users/leads/edit/{id}','UserController@editLeadsHouse');
+    Route::post('/users/leads/update','UserController@updateLeadsHouse');
+    Route::get('/users/leads/delete/{id}','UserController@leadDelete');
+    Route::get('/users/leads-house/{street}/{id}','UserController@singleLeadsHouse');
+    Route::get('/users/landing-house/edit/{id}','UserController@editHouseLanding');
+    Route::get('/users/house/delete/{id}','UserController@destroy');
+});
 
 Route::group(['middleware' => 'adminVerify'], function (){
 
@@ -69,15 +71,21 @@ Route::group(['middleware' => 'adminVerify'], function (){
 
 });
 
-Route::group(['middleware' => 'loginVerify'], function (){
+Route::get('/admin/login','AdminController@showLoginForm');
+Route::post('/admin/login-verify','AdminController@login');
 
-    Route::get('/admin/login','AdminController@showLoginForm');
-    Route::post('/admin/login-verify','AdminController@login');
+Route::get('/admin/register','AdminController@showRegForm');
+Route::post('/admin/registration','AdminController@registration');
 
-    Route::get('/admin/register','AdminController@showRegForm');
-    Route::post('/admin/registration','AdminController@registration');
-
-});
+//Route::group(['middleware' => 'loginVerify'], function (){
+//
+//    Route::get('/admin/login','AdminController@showLoginForm');
+//    Route::post('/admin/login-verify','AdminController@login');
+//
+//    Route::get('/admin/register','AdminController@showRegForm');
+//    Route::post('/admin/registration','AdminController@registration');
+//
+//});
 
 Route::get('/log-out','AdminController@logOut');
 
