@@ -57,7 +57,6 @@ class LandingHouseController extends Controller
     public function houseLandendList(){
 
         $data=LandingHouse::all()->where('status','active');
-        //return $data;
         $i=0;
         foreach ($data as $house){
             $img=HouseImage::where('house_id',$house->id)->first();

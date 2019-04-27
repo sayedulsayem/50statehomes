@@ -21,6 +21,9 @@ Route::get('/register', 'UserController@showRegister');
 Route::post('/registration', 'UserController@registration');
 
 Route::get('/users', 'UserController@index');
+Route::get('/users/add-house-landing', 'UserController@addHouseLanding');
+Route::post('/users/store-house-landing', 'UserController@storeHouseLanding');
+Route::get('/users/house-landed-list', 'UserController@houseLandendList');
 
 Route::group(['middleware' => 'adminVerify'], function (){
 

@@ -1,4 +1,4 @@
-@extends('admin-panel.master')
+@extends('user.master')
 @section('title')
     House Landed List
 @endsection
@@ -11,7 +11,7 @@
                 <small>table</small>
             </h1>
             <ol class="breadcrumb">
-                <li><a href="{{ url('/admin') }}"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li><a href="{{ url('/users') }}"><i class="fa fa-dashboard"></i> Home</a></li>
                 <li class="active">house landed list</li>
             </ol>
         </section>
@@ -31,22 +31,26 @@
                     </div>
                 @endif
 
-                 @foreach($data as $value)
-                        <div class="col-md-3">
-                            <div class="polaroid">
-                                <img src="{{ $value->image ? asset($value->image) : '' }}" alt="Norway" style="width:100%">
-                                <div class="text-house-box">
-                                    <p class="house-adr">{{ $value->street }} <span>{{ $value->city }} </span><span>{{ $value->state }} </span><span>{{ $value->zip }} </span></p>
-                                    <p class="house-price">Price : {{ $value->price }}</p>
-                                    <p class="house_bed">Bed: {{ $value->bed }}</p>
-                                    <a class="btn btn-primary" href="{{ url('/landing-house/'.$value->street.'/'.$value->id) }}">View Details</a>
-                                    <a class="btn btn-warning" href="{{ url('/admin/landing-house/edit/'.$value->id) }}">Edit</a>
-                                    <a class="btn btn-danger" href="{{ url('/admin/house/delete/'.$value->id) }}">Delete</a>
-                                    <input type="text" value="{{ url('/landing-house/'.$value->street.'/'.$value->id) }}">
+                 @if(isset($data))
+                        @foreach($data as $value)
+                            @if($value->user_id == Session::get('id'))
+                                <div class="col-md-3">
+                                    <div class="polaroid">
+                                        <img src="{{ $value->image ? asset($value->image) : '' }}" alt="Norway" style="width:100%">
+                                        <div class="text-house-box">
+                                            <p class="house-adr">{{ $value->street }} <span>{{ $value->city }} </span><span>{{ $value->state }} </span><span>{{ $value->zip }} </span></p>
+                                            <p class="house-price">Price : {{ $value->price }}</p>
+                                            <p class="house_bed">Bed: {{ $value->bed }}</p>
+                                            <a class="btn btn-primary" href="{{ url('/landing-house/'.$value->street.'/'.$value->id) }}">View Details</a>
+                                            <a class="btn btn-warning" href="{{ url('/users/landing-house/edit/'.$value->id) }}">Edit</a>
+                                            <a class="btn btn-danger" href="{{ url('/users/house/delete/'.$value->id) }}">Delete</a>
+                                            <input type="text" value="{{ url('/landing-house/'.$value->street.'/'.$value->id) }}">
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                     @endforeach
+                                @endif
+                        @endforeach
+                     @endif
             </div>
             <!-- /.row -->
         </section>
