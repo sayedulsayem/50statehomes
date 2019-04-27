@@ -139,4 +139,54 @@ class UserController extends Controller
         return view('user.pages.house-landed-list',compact('data'));
     }
 
+    public function editHouseLanding($id){
+        $houses=DB::table('landing_houses')
+            ->where('landing_houses.id',$id)
+            ->Leftjoin('house_images','landing_houses.id','=','house_images.house_id')
+            ->get();
+        return view('user.pages.edit-house-landing',compact(['houses','id']));
+    }
+
+    public function updateHouseLanding(Request $request){
+        $house_id=$request->house_id;
+        $status=LandingHouse::where('id', '=', $house_id)
+            ->update([
+                "user_id" => $request->user_id,
+                "street" => $request->street,
+                "city" => $request->city,
+                "state" => $request->state,
+                "zip" => $request->zip,
+                "price" => $request->price,
+                "bed" => $request->bed,
+                "bath" => $request->bath,
+                "status" => $request->status,
+                "description" => $request->description
+            ]);
+        if ($request->hasFile('image')) {
+            HouseImage::where('house_id',$house_id)->delete();
+            foreach ($request->image as $image){
+                $house_img=new HouseImage();
+                $file = $image;
+                $extension = $file->getClientOriginalExtension();
+                $file_name_e=$file->getClientOriginalName();
+                $file_name = pathinfo($file_name_e, PATHINFO_FILENAME);
+                $filename =$file_name.time().'.'.$extension;
+                $file->move('user/images/house/', $filename);
+                $file_path='user/images/house/'.$filename;
+                $house_img->image=$file_path;
+                $house_img->house_id=$house_id;
+                $i_status=$house_img->save();
+            }
+        }
+        if (isset($status)){
+            return redirect('users/house-landed-list')->with('success','House new info added successfully.');
+        }
+        elseif (isset($i_status)){
+            return redirect('users/house-landed-list')->with('success','House new info added successfully.');
+        }
+        else{
+            return redirect('users/house-landed-list')->with('error','House new info not added successfully.');
+        }
+    }
+
 }

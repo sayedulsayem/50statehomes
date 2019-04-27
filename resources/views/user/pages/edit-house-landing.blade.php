@@ -1,4 +1,4 @@
-@extends('admin-panel.master')
+@extends('user.master')
 @section('title')
     Edit House Landing
 @endsection
@@ -11,7 +11,7 @@
                 <small>form</small>
             </h1>
             <ol class="breadcrumb">
-                <li><a href="{{ url('/admin') }}"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li><a href="{{ url('/users') }}"><i class="fa fa-dashboard"></i> Home</a></li>
                 <li class="active">Edit House Landing</li>
             </ol>
         </section>
@@ -33,7 +33,7 @@
                 @endif
 
                 <!-- form start -->
-                    <form class="form-horizontal" action="{{ url('/admin/update-house-landing') }}" method="post" enctype="multipart/form-data">
+                    <form class="form-horizontal" action="{{ url('/users/update-house-landing') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="box-body">
 
@@ -50,6 +50,12 @@
                                 <label for="house_id" class="col-sm-2 control-label">id</label>
                                 <div class="col-sm-10">
                                     <input name="house_id" type="number" value="{{ $id }}" class="form-control" id="id" placeholder="house-id">
+                                </div>
+                            </div>
+                            <div class="form-group" hidden="hidden">
+                                <label for="user_id" class="col-sm-2 control-label">user id</label>
+                                <div class="col-sm-10">
+                                    <input name="user_id" type="number" value="{{ $house->user_id }}" class="form-control" id="user_id" placeholder="user_id">
                                 </div>
                             </div>
                             <div class="form-group">
