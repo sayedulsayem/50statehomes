@@ -41,6 +41,7 @@
                                             <p class="house-adr">{{ $value->street }} <span>{{ $value->city }} </span><span>{{ $value->state }} </span><span>{{ $value->zip }} </span></p>
                                             <p class="house-price">Price : {{ $value->price }}</p>
                                             <p class="house_bed">Bed: {{ $value->bed }}</p>
+                                            <p class="house_bed">Status: {{ $value->status }}</p>
                                             <a class="btn btn-primary" href="{{ url('/landing-house/'.$value->street.'/'.$value->id) }}">View Details</a>
                                             <a class="btn btn-warning" href="{{ url('/users/landing-house/edit/'.$value->id) }}">Edit</a>
                                             <a class="btn btn-danger" href="{{ url('/users/house/delete/'.$value->id) }}">Delete</a>

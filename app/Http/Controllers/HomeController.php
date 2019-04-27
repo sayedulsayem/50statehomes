@@ -16,10 +16,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $data=DB::table('landing_houses')
-            ->where('landing_houses.id','=',4)
-            ->join('house_images','house_images.house_id','=','landing_houses.id')
-            ->get();
         return view('index');
     }
 
@@ -41,7 +37,6 @@ class HomeController extends Controller
             $data[$i]['image']=$img->image;
             $i++;
         }
-        //return $data;
         return view('index',compact('data'));
     }
 

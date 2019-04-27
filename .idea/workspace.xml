@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1545b2e8-9d70-44cb-9ab5-5b32605a0554" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/AdminValidation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/AdminValidation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/LoggedUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/LoggedUser.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <ignored path=".idea/" />
@@ -21,59 +21,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="77" column="66" selection-start-line="77" selection-start-column="66" selection-end-line="77" selection-end-column="66" />
+            <state relative-caret-position="690">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Middleware/LoggedUser.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LandingHouseController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="564">
-              <caret line="67" column="52" selection-start-line="67" selection-start-column="40" selection-end-line="67" selection-end-column="52" />
-              <folding>
-                <element signature="e#40#59#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="1759">
+              <caret line="127" column="5" lean-forward="true" selection-start-line="127" selection-start-column="5" selection-end-line="127" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Middleware/AdminValidation.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin-panel/pages/house-landed-list.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="23" column="48" lean-forward="true" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Middleware/UserValidation.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="18" column="59" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
-              <folding>
-                <element signature="e#39#51#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="65" column="59" selection-start-line="65" selection-start-column="45" selection-end-line="65" selection-end-column="59" />
+            <state relative-caret-position="570">
+              <caret line="44" column="122" lean-forward="true" selection-start-line="44" selection-start-column="122" selection-end-line="44" selection-end-column="122" />
             </state>
           </provider>
         </entry>
@@ -103,7 +70,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/database/migrations/2019_04_03_101158_create_admins_table.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin-panel/left-side-bar.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
         <option value="$PROJECT_DIR$/resources/views/front/register.blade.php" />
@@ -119,7 +85,6 @@
         <option value="$PROJECT_DIR$/database/migrations/2019_04_03_101801_create_landing_houses_table.php" />
         <option value="$PROJECT_DIR$/resources/views/front/single-house.blade.php" />
         <option value="$PROJECT_DIR$/public/front/css/main.css" />
-        <option value="$PROJECT_DIR$/resources/views/front/master.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin-panel/pages/leads-by-house.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin-panel/pages/edit-leads.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/LeadsController.php" />
@@ -134,9 +99,12 @@
         <option value="$PROJECT_DIR$/resources/views/user/pages/edit-leads.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
         <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/UserValidation.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/AdminValidation.php" />
+        <option value="$PROJECT_DIR$/resources/views/front/master.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Middleware/LoggedUser.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
       </list>
     </option>
   </component>
@@ -258,7 +226,7 @@
               <item name="50statehomes" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Middleware" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="50statehomes" type="b2602c69:ProjectViewProjectNode" />
@@ -320,15 +288,7 @@
               <item name="50statehomes" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="50statehomes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="50statehomes" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="50statehomes" type="b2602c69:ProjectViewProjectNode" />
@@ -393,12 +353,12 @@
       <workItem from="1556183041575" duration="12759000" />
       <workItem from="1556342398363" duration="202000" />
       <workItem from="1556342617540" duration="6013000" />
-      <workItem from="1556353546068" duration="10143000" />
+      <workItem from="1556353546068" duration="11032000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38743000" />
+    <option name="totallyTimeSpent" value="39632000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -445,13 +405,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/auth/verify.blade.php" />
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin-panel/left-side-bar.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -556,20 +509,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/front/master.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2692">
-          <caret line="262" column="66" selection-start-line="262" selection-start-column="66" selection-end-line="262" selection-end-column="66" />
-          <caret line="263" column="60" selection-start-line="263" selection-start-column="60" selection-end-line="263" selection-end-column="60" />
-          <caret line="267" column="62" selection-start-line="267" selection-start-column="62" selection-end-line="267" selection-end-column="62" />
-          <caret line="268" column="56" selection-start-line="268" selection-start-column="56" selection-end-line="268" selection-end-column="56" />
-          <caret line="272" column="58" selection-start-line="272" selection-start-column="58" selection-end-line="272" selection-end-column="58" />
-          <caret line="273" column="52" selection-start-line="273" selection-start-column="52" selection-end-line="273" selection-end-column="52" />
-          <caret line="277" column="54" selection-start-line="277" selection-start-column="54" selection-end-line="277" selection-end-column="54" />
-          <caret line="278" column="48" selection-start-line="278" selection-start-column="48" selection-end-line="278" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/front/single-house.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="409">
@@ -607,13 +546,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-368">
           <caret line="250" column="25" lean-forward="true" selection-start-line="250" selection-start-column="25" selection-end-line="250" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LandingHouseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="127" column="5" lean-forward="true" selection-start-line="117" selection-start-column="4" selection-end-line="127" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -701,34 +633,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/LoggedUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="67" column="52" selection-start-line="67" selection-start-column="40" selection-end-line="67" selection-end-column="52" />
-          <folding>
-            <element signature="e#40#59#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="412">
           <caret line="65" column="59" selection-start-line="65" selection-start-column="45" selection-end-line="65" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="77" column="66" selection-start-line="77" selection-start-column="66" selection-end-line="77" selection-end-column="66" />
         </state>
       </provider>
     </entry>
@@ -746,6 +654,58 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="532">
           <caret line="23" column="48" lean-forward="true" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="564">
+          <caret line="67" column="52" selection-start-line="67" selection-start-column="40" selection-end-line="67" selection-end-column="52" />
+          <folding>
+            <element signature="e#40#59#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/front/master.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="168" column="51" selection-start-line="168" selection-start-column="51" selection-end-line="168" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/LoggedUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LandingHouseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1759">
+          <caret line="127" column="5" lean-forward="true" selection-start-line="127" selection-start-column="5" selection-end-line="127" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin-panel/pages/house-landed-list.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="44" column="122" lean-forward="true" selection-start-line="44" selection-start-column="122" selection-end-line="44" selection-end-column="122" />
         </state>
       </provider>
     </entry>

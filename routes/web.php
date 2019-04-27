@@ -15,12 +15,8 @@ Route::get('/', 'HomeController@listAllHouses');
 
 Route::get('/home', 'HomeController@listAllHouses')->name('home');
 
-Route::get('/login', 'UserController@showLogin');
-Route::post('/login-verify', 'UserController@verifyLogin');
-Route::get('/register', 'UserController@showRegister');
-Route::post('/registration', 'UserController@registration');
-
 Route::group(['middleware' => 'userVerify'], function (){
+
     Route::get('/users', 'UserController@index');
     Route::get('/users/add-house-landing', 'UserController@addHouseLanding');
     Route::post('/users/update-house-landing', 'UserController@updateHouseLanding');
@@ -34,6 +30,7 @@ Route::group(['middleware' => 'userVerify'], function (){
     Route::get('/users/leads-house/{street}/{id}','UserController@singleLeadsHouse');
     Route::get('/users/landing-house/edit/{id}','UserController@editHouseLanding');
     Route::get('/users/house/delete/{id}','UserController@destroy');
+
 });
 
 Route::group(['middleware' => 'adminVerify'], function (){
@@ -71,21 +68,19 @@ Route::group(['middleware' => 'adminVerify'], function (){
 
 });
 
-Route::get('/admin/login','AdminController@showLoginForm');
-Route::post('/admin/login-verify','AdminController@login');
+Route::group(['middleware' => 'loginVerify'], function (){
 
-Route::get('/admin/register','AdminController@showRegForm');
-Route::post('/admin/registration','AdminController@registration');
+    Route::get('/admin/login','AdminController@showLoginForm');
+    Route::post('/admin/login-verify','AdminController@login');
+    Route::get('/admin/register','AdminController@showRegForm');
+    Route::post('/admin/registration','AdminController@registration');
 
-//Route::group(['middleware' => 'loginVerify'], function (){
-//
-//    Route::get('/admin/login','AdminController@showLoginForm');
-//    Route::post('/admin/login-verify','AdminController@login');
-//
-//    Route::get('/admin/register','AdminController@showRegForm');
-//    Route::post('/admin/registration','AdminController@registration');
-//
-//});
+    Route::get('/login', 'UserController@showLogin');
+    Route::post('/login-verify', 'UserController@verifyLogin');
+    Route::get('/register', 'UserController@showRegister');
+    Route::post('/registration', 'UserController@registration');
+
+});
 
 Route::get('/log-out','AdminController@logOut');
 

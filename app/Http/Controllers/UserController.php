@@ -128,7 +128,7 @@ class UserController extends Controller
     }
     public function houseLandendList(){
 
-        $data=LandingHouse::all()->where('status','active');
+        $data=LandingHouse::all();
         $i=0;
         foreach ($data as $house){
             $img=HouseImage::where('house_id',$house->id)->first();

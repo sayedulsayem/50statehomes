@@ -17,7 +17,7 @@ class LoggedUser
     public function handle($request, Closure $next)
     {
         if (Session::has('id') && Session::has('name')){
-            return redirect('/admin');
+            return redirect('/');
         }
         else{
             return $next($request);
