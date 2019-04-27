@@ -27,6 +27,7 @@ Route::post('/users/store-house-landing', 'UserController@storeHouseLanding');
 Route::get('/users/house-landed-list', 'UserController@houseLandendList');
 Route::get('/users/leads-house/{street}/{id}','UserController@singleLeadsHouse');
 Route::get('/users/landing-house/edit/{id}','UserController@editHouseLanding');
+Route::get('/users/house/delete/{id}','UserController@destroy');
 
 Route::group(['middleware' => 'adminVerify'], function (){
 

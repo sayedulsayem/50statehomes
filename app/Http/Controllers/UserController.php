@@ -188,5 +188,16 @@ class UserController extends Controller
             return redirect('users/house-landed-list')->with('error','House new info not added successfully.');
         }
     }
+    public function destroy($id){
+        $delete_hosue=DB::table('landing_houses')->where('id', '=', $id)->delete();
+        $delete_img=DB::table('house_images')->where('house_id', '=', $id)->delete();
+
+        if (isset($delete_hosue) && isset($delete_img)){
+            return redirect('users/house-landed-list')->with('success','Deleted that record.');
+        }
+        else{
+            return redirect('users/house-landed-list')->with('error','Not deleted try again.');
+        }
+    }
 
 }
