@@ -199,5 +199,23 @@ class UserController extends Controller
             return redirect('users/house-landed-list')->with('error','Not deleted try again.');
         }
     }
+    public function leadsHouses(){
+        $data=LandingHouse::all()->where('status','active');
+        $i=0;
+        foreach ($data as $house){
+            $img=HouseImage::all()->where('house_id',$house->id)->first();
+            $data[$i]['image']=$img->image;
+            $i++;
+        }
+        return view('user.pages.leads',compact('data'));
+    }
+    public function singleLeadsHouse($street,$id){
+        $leads=DB::table('landing_houses')
+            ->select('landing_houses.id as house_id','leads.id as lead_id','lname','lemail','lphone','street','city','state','zip','appoint_date','appoint_time','leads.created_at')
+            ->where(['landing_houses.id' => $id, 'landing_houses.street' => $street])
+            ->join('leads','landing_houses.id','=','leads.house_id')
+            ->get();
+        return view('user.pages.leads-by-house',compact('leads'));
+    }
 
 }

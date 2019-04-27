@@ -1,4 +1,4 @@
-@extends('admin-panel.master')
+@extends('user.master')
 @section('title')
     Leads List
 @endsection
@@ -11,7 +11,7 @@
                 <small>table</small>
             </h1>
             <ol class="breadcrumb">
-                <li><a href="{{ url('/admin') }}"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li><a href="{{ url('/users') }}"><i class="fa fa-dashboard"></i> Home</a></li>
                 <li class="active">leads list</li>
             </ol>
         </section>
@@ -31,17 +31,19 @@
                 @endif
 
                 @foreach($data as $value)
-                    <div class="col-md-3">
-                        <div class="polaroid">
-                            <img src="{{ asset($value->image) }}" alt="Norway" style="width:100%">
-                            <div class="text-house-box">
-                                <p class="house-adr">{{ $value->street }} <span>{{ $value->city }} </span><span>{{ $value->state }} </span><span>{{ $value->zip }} </span></p>
-                                <p class="house-price">Price : {{ $value->price }}</p>
-                                <p class="house_bed">Bed: {{ $value->bed }}</p>
-                                <a class="btn btn-primary" href="{{ url('/admin/leads-house/'.$value->street.'/'.$value->id) }}">View Leads</a>
+                        @if($value->user_id == Session::get('id'))
+                            <div class="col-md-3">
+                                <div class="polaroid">
+                                    <img src="{{ asset($value->image) }}" alt="Norway" style="width:100%">
+                                    <div class="text-house-box">
+                                        <p class="house-adr">{{ $value->street }} <span>{{ $value->city }} </span><span>{{ $value->state }} </span><span>{{ $value->zip }} </span></p>
+                                        <p class="house-price">Price : {{ $value->price }}</p>
+                                        <p class="house_bed">Bed: {{ $value->bed }}</p>
+                                        <a class="btn btn-primary" href="{{ url('/users/leads-house/'.$value->street.'/'.$value->id) }}">View Leads</a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
+                            @endif
                 @endforeach
 
             </div>

@@ -26,6 +26,8 @@ Route::post('/users/update-house-landing', 'UserController@updateHouseLanding');
 Route::post('/users/store-house-landing', 'UserController@storeHouseLanding');
 Route::get('/users/house-landed-list', 'UserController@houseLandendList');
 Route::get('/users/leads-house/{street}/{id}','UserController@singleLeadsHouse');
+Route::get('/users/leads','UserController@leadsHouses');
+Route::get('/admin/leads-house/{street}/{id}','UserController@singleLeadsHouse');
 Route::get('/users/landing-house/edit/{id}','UserController@editHouseLanding');
 Route::get('/users/house/delete/{id}','UserController@destroy');
 
