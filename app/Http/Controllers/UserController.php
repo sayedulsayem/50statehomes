@@ -249,5 +249,19 @@ class UserController extends Controller
         }
         //return $request;
     }
+    public function leadDelete($id){
+        $leads_house=Leads::where('id',$id)->first();
+
+        $houses=LandingHouse::where('id',$leads_house->house_id)->first();
+
+        $delete_leads=DB::table('leads')->where('id', '=', $id)->delete();
+
+        if (isset($delete_leads)){
+            return redirect('users/leads-house/'.$houses->street.'/'.$houses->id)->with('success','Lead deleted successfully.');
+        }
+        else{
+            return redirect('users/leads-house/'.$houses->street.'/'.$houses->id)->with('error','Lead deletion failed. try again later.');
+        }
+    }
 
 }

@@ -4,9 +4,6 @@
     <list default="true" id="1545b2e8-9d70-44cb-9ab5-5b32605a0554" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/pages/edit-leads.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/pages/edit-leads.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/pages/leads-by-house.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/pages/leads-by-house.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <ignored path=".idea/" />
@@ -24,8 +21,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="29" column="66" selection-start-line="29" selection-start-column="66" selection-end-line="29" selection-end-column="66" />
+            <state relative-caret-position="321">
+              <caret line="31" column="64" selection-start-line="31" selection-start-column="64" selection-end-line="31" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -33,29 +30,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LeadsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="61" column="5" lean-forward="true" selection-start-line="53" selection-start-column="4" selection-end-line="61" selection-end-column="5" />
+            <state relative-caret-position="562">
+              <caret line="97" column="5" lean-forward="true" selection-start-line="84" selection-start-column="4" selection-end-line="97" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="682">
-              <caret line="226" column="36" selection-start-line="226" selection-start-column="32" selection-end-line="226" selection-end-column="36" />
+            <state relative-caret-position="802">
+              <caret line="262" column="33" selection-start-line="262" selection-start-column="33" selection-end-line="262" selection-end-column="33" />
               <folding>
                 <element signature="e#40#59#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin-panel/pages/edit-leads.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4980">
-              <caret line="175" column="22" lean-forward="true" selection-start-line="175" selection-start-column="22" selection-end-line="175" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -78,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/user/pages/edit-leads.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1463">
-              <caret line="173" column="31" selection-start-line="173" selection-start-column="31" selection-end-line="173" selection-end-column="31" />
+            <state relative-caret-position="323">
+              <caret line="35" column="76" selection-start-line="35" selection-start-column="76" selection-end-line="35" selection-end-column="76" />
             </state>
           </provider>
         </entry>
@@ -148,9 +136,9 @@
         <option value="$PROJECT_DIR$/resources/views/admin-panel/master.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/user/master.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/user/pages/leads-by-house.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/user/pages/edit-leads.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
-        <option value="$PROJECT_DIR$/resources/views/user/pages/edit-leads.blade.php" />
       </list>
     </option>
   </component>
@@ -407,18 +395,18 @@
       <workItem from="1556183041575" duration="12759000" />
       <workItem from="1556342398363" duration="202000" />
       <workItem from="1556342617540" duration="6013000" />
-      <workItem from="1556353546068" duration="7871000" />
+      <workItem from="1556353546068" duration="8407000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36471000" />
+    <option name="totallyTimeSpent" value="37007000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2056928" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2056928" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="npm" order="3" side_tool="true" />
@@ -680,30 +668,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="29" column="66" selection-start-line="29" selection-start-column="66" selection-end-line="29" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LeadsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="61" column="5" lean-forward="true" selection-start-line="53" selection-start-column="4" selection-end-line="61" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="226" column="36" selection-start-line="226" selection-start-column="32" selection-end-line="226" selection-end-column="36" />
-          <folding>
-            <element signature="e#40#59#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin-panel/pages/edit-leads.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4980">
@@ -713,8 +677,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/user/pages/edit-leads.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1463">
-          <caret line="173" column="31" selection-start-line="173" selection-start-column="31" selection-end-line="173" selection-end-column="31" />
+        <state relative-caret-position="323">
+          <caret line="35" column="76" selection-start-line="35" selection-start-column="76" selection-end-line="35" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LeadsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="97" column="5" lean-forward="true" selection-start-line="84" selection-start-column="4" selection-end-line="97" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="31" column="64" selection-start-line="31" selection-start-column="64" selection-end-line="31" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="802">
+          <caret line="262" column="33" selection-start-line="262" selection-start-column="33" selection-end-line="262" selection-end-column="33" />
+          <folding>
+            <element signature="e#40#59#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

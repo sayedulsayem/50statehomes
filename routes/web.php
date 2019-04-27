@@ -29,6 +29,7 @@ Route::get('/users/leads-house/{street}/{id}','UserController@singleLeadsHouse')
 Route::get('/users/leads','UserController@leadsHouses');
 Route::get('/users/leads/edit/{id}','UserController@editLeadsHouse');
 Route::post('/users/leads/update','UserController@updateLeadsHouse');
+Route::get('/users/leads/delete/{id}','UserController@leadDelete');
 Route::get('/users/leads-house/{street}/{id}','UserController@singleLeadsHouse');
 Route::get('/users/landing-house/edit/{id}','UserController@editHouseLanding');
 Route::get('/users/house/delete/{id}','UserController@destroy');
