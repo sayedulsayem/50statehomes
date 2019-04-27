@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1545b2e8-9d70-44cb-9ab5-5b32605a0554" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LeadsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LeadsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_04_03_101801_create_landing_houses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_04_03_101801_create_landing_houses_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_04_03_103515_create_leads_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_04_03_103515_create_leads_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/front/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/front/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/single-house.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/single-house.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/pages/edit-user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/pages/edit-user.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin-panel/pages/edit-leads.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin-panel/pages/edit-leads.blade.php" afterDir="false" />
     </list>
     <ignored path=".idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,8 +20,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="562">
-              <caret line="76" column="79" selection-start-line="76" selection-start-column="66" selection-end-line="76" selection-end-column="79" />
+            <state relative-caret-position="352">
+              <caret line="57" column="71" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -35,8 +29,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LeadsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-120">
-              <caret line="16" column="43" lean-forward="true" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+            <state relative-caret-position="420">
+              <caret line="92" column="124" selection-start-line="92" selection-start-column="112" selection-end-line="92" selection-end-column="124" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin-panel/pages/edit-leads.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="71" column="45" selection-start-line="71" selection-start-column="45" selection-end-line="71" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin-panel/pages/leads-by-house.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="64" column="79" selection-start-line="64" selection-start-column="75" selection-end-line="64" selection-end-column="79" />
             </state>
           </provider>
         </entry>
@@ -83,15 +95,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="183">
               <caret line="294" column="84" selection-start-line="294" selection-start-column="84" selection-end-line="294" selection-end-column="84" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/user/pages/house-landed-list.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="35" column="70" lean-forward="true" selection-start-line="35" selection-start-column="70" selection-end-line="35" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -150,6 +153,8 @@
         <option value="$PROJECT_DIR$/resources/views/front/single-house.blade.php" />
         <option value="$PROJECT_DIR$/public/front/css/main.css" />
         <option value="$PROJECT_DIR$/resources/views/front/master.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin-panel/pages/leads-by-house.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin-panel/pages/edit-leads.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/LeadsController.php" />
       </list>
     </option>
@@ -319,6 +324,21 @@
               <item name="50statehomes" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin-panel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="50statehomes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="50statehomes" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin-panel" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="50statehomes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="50statehomes" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="front" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -384,18 +404,18 @@
       <workItem from="1556183041575" duration="12759000" />
       <workItem from="1556342398363" duration="202000" />
       <workItem from="1556342617540" duration="6013000" />
-      <workItem from="1556353546068" duration="2562000" />
+      <workItem from="1556353546068" duration="3460000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31162000" />
+    <option name="totallyTimeSpent" value="32060000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2056928" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2056928" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="npm" order="3" side_tool="true" />
@@ -625,13 +645,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="76" column="79" selection-start-line="76" selection-start-column="66" selection-end-line="76" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/front/single-house.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="409">
@@ -639,10 +652,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin-panel/pages/leads-by-house.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="64" column="79" selection-start-line="64" selection-start-column="75" selection-end-line="64" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="57" column="71" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin-panel/pages/edit-leads.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="71" column="45" selection-start-line="71" selection-start-column="45" selection-end-line="71" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LeadsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-120">
-          <caret line="16" column="43" lean-forward="true" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+        <state relative-caret-position="420">
+          <caret line="92" column="124" selection-start-line="92" selection-start-column="112" selection-end-line="92" selection-end-column="124" />
         </state>
       </provider>
     </entry>

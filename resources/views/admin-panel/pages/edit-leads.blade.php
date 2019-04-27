@@ -54,31 +54,25 @@
                                     <input name="house_id" type="number" value="{{ $leadById->house_id }}" class="form-control" id="house_id" placeholder="house_id">
                                 </div>
                             </div>
-                            <div class="form-group" hidden="hidden">
-                                <label for="user_id" class="col-sm-2 control-label">House Id</label>
+                            <div class="form-group">
+                                <label for="lname" class="col-sm-2 control-label">Name</label>
+
                                 <div class="col-sm-10">
-                                    <input name="user_id" type="number" value="{{ $leadById->user_id }}" class="form-control" id="user_id" placeholder="user_id">
+                                    <input name="lname" type="text" value="{{ $leadById->lname }}" class="form-control" id="name" placeholder="name">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="name" class="col-sm-2 control-label">Name</label>
+                                <label for="lemail" class="col-sm-2 control-label">Email</label>
 
                                 <div class="col-sm-10">
-                                    <input name="name" type="text" value="{{ $leadById->name }}" class="form-control" id="name" placeholder="name" readonly="readonly">
+                                    <input name="lemail" type="text" value="{{ $leadById->lemail }}" class="form-control" id="email" placeholder="email">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="email" class="col-sm-2 control-label">Email</label>
+                                <label for="lphone" class="col-sm-2 control-label">Phone</label>
 
                                 <div class="col-sm-10">
-                                    <input name="email" type="text" value="{{ $leadById->email }}" class="form-control" id="email" placeholder="email" readonly="readonly">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone" class="col-sm-2 control-label">Phone</label>
-
-                                <div class="col-sm-10">
-                                    <input name="phone" type="text" value="{{ $leadById->phone }}" class="form-control" id="phone" placeholder="phone" readonly="readonly">
+                                    <input name="lphone" type="text" value="{{ $leadById->lphone }}" class="form-control" id="phone" placeholder="phone">
                                 </div>
                             </div>
 

@@ -53,10 +53,9 @@ class LeadsController extends Controller
     }
     public function editLeadsHouse($id){
         $leadById=DB::table('leads')
-            ->select('landing_houses.id as house_id','leads.id as lead_id','users.id as user_id','name','email','phone','street','city','state','zip','appoint_date','appoint_time','offer_price','comment','buying_plan','toured','leads.created_at')
+            ->select('landing_houses.id as house_id','leads.id as lead_id','lname','lemail','lphone','street','city','state','zip','appoint_date','appoint_time','offer_price','comment','buying_plan','toured','leads.created_at')
             ->where('leads.id',$id)
             ->join('landing_houses','landing_houses.id','=','leads.house_id')
-            ->join('users','leads.user_id','=','users.id')
             ->get();
         //return $leadById;
         return view('admin-panel.pages.edit-leads',compact('leadById'));
@@ -65,6 +64,9 @@ class LeadsController extends Controller
         $leadId=$request->lead_id;
         $status=Leads::where('id',$leadId)
             ->update([
+                'lname' => $request->lname,
+                'lemail' => $request->lemail,
+                'lphone' => $request->lphone,
                 'offer_price' => $request->offer_price,
                 'appoint_date' => $request->appoint_date,
                 'appoint_time' => $request->appoint_time,
