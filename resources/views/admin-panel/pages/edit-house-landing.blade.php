@@ -52,6 +52,12 @@
                                     <input name="house_id" type="number" value="{{ $id }}" class="form-control" id="id" placeholder="house-id">
                                 </div>
                             </div>
+                            <div class="form-group" hidden="hidden">
+                                <label for="user_id" class="col-sm-2 control-label">user id</label>
+                                <div class="col-sm-10">
+                                    <input name="user_id" type="number" value="{{ $house->user_id }}" class="form-control" id="user_id" placeholder="user_id">
+                                </div>
+                            </div>
                             <div class="form-group">
                                 <label for="street" class="col-sm-2 control-label">Street</label>
 

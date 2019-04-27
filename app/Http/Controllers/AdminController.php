@@ -265,19 +265,21 @@ class AdminController extends Controller
                     ['image' => $file_path]
                 );
         }
-        if ($request->password == $request->c_password){
-            $status=User::where('id',$request->id)
-                ->update(
-                    [
-                        'name'=>$request->name,
-                        'phone'=>$request->phone,
-                        'password'=>Hash::make($request->password),
-                        'status'=>$request->status,
-                    ]
-                );
-        }
-        else{
-            return redirect('admin/users/profile/edit/'.$request->id)->with('error','confirm password is not matched.');
+        if (isset($request->password)){
+            if ($request->password == $request->c_password){
+                $status=User::where('id',$request->id)
+                    ->update(
+                        [
+                            'name'=>$request->name,
+                            'phone'=>$request->phone,
+                            'password'=>Hash::make($request->password),
+                            'status'=>$request->status,
+                        ]
+                    );
+            }
+            else{
+                return redirect('admin/users/profile/edit/'.$request->id)->with('error','confirm password is not matched.');
+            }
         }
         if (isset($status)){
             return redirect('admin/user-list')->with('success','user info updated.');

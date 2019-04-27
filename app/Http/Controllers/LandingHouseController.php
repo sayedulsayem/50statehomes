@@ -78,6 +78,7 @@ class LandingHouseController extends Controller
         $house_id=$request->house_id;
         $status=LandingHouse::where('id', '=', $house_id)
             ->update([
+                "user_id" => $request->user_id,
                 "street" => $request->street,
                 "city" => $request->city,
                 "state" => $request->state,
@@ -88,22 +89,20 @@ class LandingHouseController extends Controller
                 "status" => $request->status,
                 "description" => $request->description
             ]);
-        $delete_status=HouseImage::where('house_id',$house_id)->delete();
-        if (isset($delete_status)){
-            if ($request->hasFile('image')) {
-                foreach ($request->image as $image){
-                    $house_img=new HouseImage();
-                    $file = $image;
-                    $extension = $file->getClientOriginalExtension();
-                    $file_name_e=$file->getClientOriginalName();
-                    $file_name = pathinfo($file_name_e, PATHINFO_FILENAME);
-                    $filename =$file_name.time().'.'.$extension;
-                    $file->move('panel/images/house/', $filename);
-                    $file_path='panel/images/house/'.$filename;
-                    $house_img->image=$file_path;
-                    $house_img->house_id=$house_id;
-                    $i_status=$house_img->save();
-                }
+        if ($request->hasFile('image')) {
+            HouseImage::where('house_id',$house_id)->delete();
+            foreach ($request->image as $image){
+                $house_img=new HouseImage();
+                $file = $image;
+                $extension = $file->getClientOriginalExtension();
+                $file_name_e=$file->getClientOriginalName();
+                $file_name = pathinfo($file_name_e, PATHINFO_FILENAME);
+                $filename =$file_name.time().'.'.$extension;
+                $file->move('panel/images/house/', $filename);
+                $file_path='panel/images/house/'.$filename;
+                $house_img->image=$file_path;
+                $house_img->house_id=$house_id;
+                $i_status=$house_img->save();
             }
         }
         if (isset($status) && isset($i_status)){
