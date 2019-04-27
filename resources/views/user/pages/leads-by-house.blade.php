@@ -62,7 +62,7 @@
                                         <td>{{ date('m-d-Y', strtotime($lead->appoint_date)) }}</td>
                                         <td>{{ date('g:i a', strtotime($lead->appoint_time)) }}</td>
                                         <td>{{ date('m-d-Y', strtotime($lead->created_at)) }}</td>
-                                        <td> <a href="{{ url('/admin/leads/edit/'.$lead->lead_id) }}"><i class="glyphicon glyphicon-edit"></i> </a> || <a href="{{ url('/admin/leads/delete/'.$lead->lead_id) }}"><i class="glyphicon glyphicon-trash"></i> </a>  </td>
+                                        <td> <a href="{{ url('/users/leads/edit/'.$lead->lead_id) }}"><i class="glyphicon glyphicon-edit"></i> </a> || <a href="{{ url('/users/leads/delete/'.$lead->lead_id) }}"><i class="glyphicon glyphicon-trash"></i> </a>  </td>
                                     </tr>
                                     @endforeach
 

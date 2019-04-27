@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\HouseImage;
 use App\LandingHouse;
+use App\Leads;
 use App\User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -216,6 +217,37 @@ class UserController extends Controller
             ->join('leads','landing_houses.id','=','leads.house_id')
             ->get();
         return view('user.pages.leads-by-house',compact('leads'));
+    }
+    public function editLeadsHouse($id){
+        $leadById=DB::table('leads')
+            ->select('landing_houses.id as house_id','leads.id as lead_id','lname','lemail','lphone','street','city','state','zip','appoint_date','appoint_time','offer_price','comment','buying_plan','toured','leads.created_at')
+            ->where('leads.id',$id)
+            ->join('landing_houses','landing_houses.id','=','leads.house_id')
+            ->get();
+        //return $leadById;
+        return view('user.pages.edit-leads',compact('leadById'));
+    }
+    public function updateLeadsHouse(Request $request){
+        $leadId=$request->lead_id;
+        $status=Leads::where('id',$leadId)
+            ->update([
+                'lname' => $request->lname,
+                'lemail' => $request->lemail,
+                'lphone' => $request->lphone,
+                'offer_price' => $request->offer_price,
+                'appoint_date' => $request->appoint_date,
+                'appoint_time' => $request->appoint_time,
+                'comment' => $request->comment,
+                'buying_plan' => $request->buying_plan,
+                'toured' => $request->toured
+            ]);
+        if (isset($status)){
+            return redirect('users/leads-house/'.$request->street.'/'.$request->house_id)->with('success','Lead edited successfully.');
+        }
+        else{
+            return redirect('users/leads-house/'.$request->street.'/'.$request->house_id)->with('error','Lead edited failed. try again later.');
+        }
+        //return $request;
     }
 
 }
