@@ -307,4 +307,14 @@ class AdminController extends Controller
         }
     }
 
+    public function deleteUser($id){
+        $delete_user=DB::table('users')->where('id', '=', $id)->delete();
+        if (isset($delete_user)){
+            return redirect('admin/user-list')->with('success','user deleted successfully.');
+        }
+        else{
+            return redirect('admin/user-list')->with('error','user deletion failed. try again later.');
+        }
+    }
+
 }
